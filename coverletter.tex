@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fill in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CompanyName}{Company}
+\newcommand{\Position}{Please hire me, I wrote a whole 2 paragraphs}
+\newcommand{\ToWhom}{Dear \CompanyName\ Hiring Manager,}
+\newcommand{\IntroMain}{
+  If you received my real resume and find yourself here, I encourage you to read this one too. Or, if you're someone like me, feel free to use this resume template (see notes in the README).
+}
+\newcommand{\OneMain}{
+  I've already spent an hour filling my fake resume with text. I don't plan to write much more for this cover letter. Here comes the lorem ipsum...
+}
+\newcommand{\TwoMain}{
+  \lipsum[1]
+}
+\newcommand{\OutroMain}{
+  \lipsum[3]
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paragraphs
+% can have many versions of ParOne etc and switch between them
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ParIntro}{\IntroMain}
+\newcommand{\ParOne}{\OneMain}
+\newcommand{\ParTwo}{\TwoMain}
+\newcommand{\ParOutro}{\OutroMain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover letter document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CoverLetterContents}{
+  \begin{minipage}[t][\MagicVFill]{\dimexpr1\linewidth-6\tabcolsep-2\arrayrulewidth}
+    \centering % Double minipage to ensure big margins
+    \begin{minipage}[t]{\dimexpr\linewidth-16\tabcolsep}
+      \raggedright {
+        \linespread{1.2}\selectfont\SourceSansProFont\color{MainTheme}
+        \vspace{8\tabcolsep}
+            \today\par
+        \vspace{4\tabcolsep}
+        %     \CompanyName \ \CompanyFullName\par
+        %     \CompanyAddress\par
+        %     \CompanyPostalCode\par
+        \vspace{12\tabcolsep}
+            \ToWhom\par
+        \vspace{4\tabcolsep}
+            Re: \Position\par
+        \vspace{2\tabcolsep}
+            \ParIntro\par
+        \vspace{2\tabcolsep}
+            \ParOne\par
+        \vspace{2\tabcolsep}
+            \ParTwo\par
+        \vspace{2\tabcolsep}
+            \ParOutro\par
+        \vspace{2\tabcolsep}
+        Cheers,\par
+        \vspace{1\tabcolsep}
+        Emily Chu
+      }
+    \end{minipage}
+  \end{minipage}
+}
+
+\arrayrulecolor{LeftTheme}
+\begin{tabular}{
+  | p{\dimexpr0pt}
+    p{\dimexpr1\linewidth-6\tabcolsep-1\arrayrulewidth}
+    p{\dimexpr0pt}
+}
+  \multicolumn{1}{!{\color{LeftTheme}\vline} l}{} & \multicolumn{1}{l}{\TopRow} &  \\ \arrayrulecolor{RightTheme}\cline{2-3}
+  \multicolumn{1}{!{\color{LeftTheme}\vline} l}{} & \multicolumn{1}{!{\color{RightTheme}\vline} l}{} &  \\ \arrayrulecolor{LeftTheme}\cline{1-2}
+  \multicolumn{1}{!{\color{LeftTheme}\vline} l}{} & \multicolumn{1}{!{\color{RightTheme}\vline} l}{\CoverLetterContents} &  \\ 
+  \multicolumn{1}{!{\color{LeftTheme}\vline} l}{} &  &  \\ 
+\end{tabular}

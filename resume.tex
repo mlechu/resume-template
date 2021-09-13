@@ -1,0 +1,145 @@
+% Cursed newline below, don't delete it
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sections 
+% (Experience, projects, skills...)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ExperienceSection}{
+  \section{Work Experience}
+
+  \SubsectionAndLocation{Arby's}{Canada \ • \ Remote}
+  \DetailAndDate{Software developer intern}{May 2021 – Present ($\rightarrow$ Dec 2021)}
+  \begin{itemize}
+    \item Joked with the past intern over Slack about the questionable \cm{JavaScript} and \cm{TypeScript} code they wrote
+    \item While upgrading the app through multiple major versions of \cm{Angular}, managed to bring CPU usage to 100\% for extended periods of time (caused by the antivirus scanner going insane). Luckily, due to remote work, I did not have to deal with the machine's noise or heat.
+    \item Enjoyed 3+ poké salads from the \cm{Elasticsearch} webinars that offered UberEats vouchers
+    \item Woke at 4:30–5:30 each morning in time for 6AM standups in my time zone; went out to enjoy the early sunrise while it lasted.
+  \end{itemize}
+
+  \SubsectionAndLocation{UBC Department of Computer Science}{Vancouver, BC \ • \ Remote}
+  \DetailAndDate{Leetcode teaching assistant}{Jan 2021 – Jun 2021}
+  \begin{itemize}
+    \item Taught dozens of students why not to pass a massive 2D array as an argument "by value" in \cm{C++}
+    \item Navigated past thousands of (identical) stack frames in \cm{GDB} caused by incorrect base case detection
+    \item Remained nameless on the course Discord until the end of the term, when I linked students to my LaTeX resume template
+  \end{itemize}
+}
+
+
+\newcommand{\ProjectsSection}{
+  \section{Technical Projects}
+
+  \SubsectionAndLocation{Worklist machine}{%
+    \href{https://worklist-machine.web.app}{App \LinkIcon} •
+    \href{https://github.com/mlechu/worklist-machine}{ Code \LinkIcon}%
+  }%
+  \DetailAndDate{Course scheduler designed to "save me time" lol}{Aug 2020 – Present}
+  \begin{itemize}
+    \item Started this project knowing nothing; picked \cm{Node.js}, \cm{React}, and \cm{MongoDB} mostly because that's what some freecodecamp tutorial used
+    \item Discovered the cons of introducing dependencies such as \cm{Bootstrap}—on my own time, reinventing the wheel is just a learning exercise
+    \item Due to the exponential-time algorithm, currently working on notifying the user if the input is too large. Solving the halting problem???
+    \item Received 4+ "wow nice" and 2+ "cool can you make it for my school" comments
+  \end{itemize}
+
+  \SubsectionAndLocation{R.A.N.T. (TOHacks 2021)}{%
+    \href{https://devpost.com/software/rant-dzyl0t}{ Video \LinkIcon} •
+    \href{https://github.com/mlechu/RANT}{ Code \LinkIcon}}%
+  \DetailAndDate{Robot interrogation simulator}{May 2021}
+  \begin{itemize}
+    \item Came up with a surprisingly usable project name in 30 seconds, marking a 300\%+ reduction from past hackathons
+    \item Wrangled the AI into producing relevant questions using \cm{Javascript} and some convoluted pipeline; laughed at many incorrect outputs
+    \item Worked within the constraints of the \cm{Google Cloud Natural Language} and \cm{OpenAI GPT-3} free API dollars
+    \item Scripted, recorded, and uploaded a demo video starring stock photos in the final 30 minutes of the hackathon
+  \end{itemize}
+
+  \SubsectionAndLocation{Greenhouse pattern recognition (WinHacks 2021)}{
+    \href{https://pattern-completion-app.herokuapp.com/}{ App \LinkIcon.} •
+    \href{https://github.com/mlechu/Pattern-Completion-App}{ Code \LinkIcon}}%
+  \DetailAndDate{Probably unpaid labour, but it's ok it was fun}{Mar 2021}
+  \begin{itemize}
+    \item Dragged two friends into their first hackathon, hopefully helping them learn \cm{Python} and \cm{Flask}
+    \item Won a category by default—all the other teams gave up on this category or something
+  \end{itemize}
+}
+
+\newcommand{\OtherExperienceSection}{
+  \section{Other Experience}
+  
+  \SubsectionAndLocation{Summit Leadership Case Competition}{Vancouver, BC}
+  \DetailAndDate{Team leader—"The Education Application"}{Jan 2018 – Jun 2018}
+  \begin{itemize}
+    \item Bombarded mentors with university questions that would usually be answered by an older sibling if I had one
+    \item Still curious about which UBC room we presented in for the semifinals, despite actually attending UBC now
+    \item Sat in office chairs possibly worth more than anything I owned 
+  \end{itemize}
+
+  \SubsectionAndLocation{A not-for-profit organization}{Vancouver, BC}
+  \DetailAndDate{Jack of all trades}{Apr 2017 – Jun 2019}
+}
+
+\newcommand{\EducationSection}{
+  \section{Education}
+  \SubsectionAndLocation{The University of British Columbia}{Vancouver, BC}
+  \DetailAndDate{Combined Major in Business and Computer Science, 999\% average}{Sep 2019 – Present ($\rightarrow$ Apr 2024)}
+}
+
+\newcommand{\AchievementsSection}{
+  \section{Achievements}
+  % can increase number of columns if your award names are shorter
+  % three would be {tabular}{@{}lll@{}}
+  % @{} just sets the horizontal gap where default is 2\tabcolsep
+  \begin{tabular}{@{}l@{\hspace{4\tabcolsep}}l@{}}
+    Certified Decent Grades™ \Date{(Sep 2019 – Apr 2021)}& Award (maybe a scholarship?) named after a very kind family \Date{(Jun 2019)}\\[\tabcolsep]
+    An impressive-sounding metal disk in a blue felt box \Date{(Jan 2020)} & Award received during a phone call on the bus \Date{(Jun 2018)}\\
+  \end{tabular}
+  \vspace{0.75\tabcolsep}
+}
+
+\newcommand{\HobbiesSection}{
+  \section{Interests}{
+    \linespread{1.2}\selectfont
+    Graphic design,
+    going outside,
+    being well-rounded,
+    arguing in favour of the interests section on a resume; they're good to have
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume body
+% go here to rearrange education, work, etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TheOnlyColumn}{
+  % width = page—two empty columns (one on each side) or 4 \tabcolseps
+  % vfill doesn't really matter anymore given that there are no vertical lines here
+  \begin{minipage}[t][\MagicVFill]{\dimexpr\linewidth-4\tabcolsep}
+    \EducationSection
+    \ExperienceSection
+    \ProjectsSection
+    \OtherExperienceSection
+    \AchievementsSection
+    \HobbiesSection
+    \vfill
+    \Sneaky{Last updated: \today.}%
+    \Sneaky{If you found this: Hello! :)}%
+  \end{minipage}
+} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\arrayrulecolor{RightTheme}
+\begin{tabular}{% 3 cols: empty, main, empty
+  p{\dimexpr0pt}
+  p{\dimexpr\linewidth-6\tabcolsep-1\arrayrulewidth}
+  p{\dimexpr0pt}
+}
+  % | for default vline
+  % !\color{x}\vline for custom.
+  % put the vlines on either side of an {l}
+  \multicolumn{1}{!{\color{LeftTheme}\vline} l}{} & \multicolumn{2}{l}{\TopRow} \\ \cline{2-3}
+  \multicolumn{1}{!{\color{LeftTheme}\vline} l}{} & & \multicolumn{1}{l}{} \\ \arrayrulecolor{LeftTheme}\cline{1-2}
+  \multicolumn{3}{@{\hspace{2\tabcolsep}}l@{\hspace{2\tabcolsep}}}{\TheOnlyColumn}\\
+  \multicolumn{1}{l}{} & & \multicolumn{1}{l}{} \\
+\end{tabular}

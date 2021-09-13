@@ -1,0 +1,34 @@
+% !TEX program = xelatex
+% compile here bro!!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Toggle pages 1/0
+% ifdefined allows command line override
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined\CoverLetterToggle\else\def\CoverLetterToggle{1}\fi
+\ifdefined\ResumeToggle\else\def\ResumeToggle{1}\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{resume-class}
+
+\newcommand{\TopRow}{
+  \begin{minipage}[t]{\dimexpr\linewidth-6\tabcolsep-4\arrayrulewidth}
+    \raggedright
+    \vspace{4\tabcolsep}%
+    \BigName{Emily Chu}\hfill\\%
+    \vspace{4pt}%
+    \mbox{%
+      \LittleLink{mailto:mail@mlechu.com}               {\faIcon{envelope-square}  \ mail@}
+      \LittleLink{https://mlechu.com}                   {\faIcon{share-alt-square} \ mlechu.com/}
+      \LittleLink{https://github.com/mlechu/}           {\faIcon{github-square}    \ GitHub}
+      \LittleLink{https://www.linkedin.com/in/mlechu/}  {\faIcon{linkedin}         \ LinkedIn}
+      \LittleLink{}                                     {\faIcon{phone-square-alt} \ 000-000-0000}
+    }\hfill%
+    \vspace{2\tabcolsep}%
+  \end{minipage}%
+}%
+
+\begin{document}
+  \if\CoverLetterToggle1\input{coverletter}\fi
+  \if\ResumeToggle1\input{resume}\fi
+\end{document}
